@@ -1,0 +1,138 @@
+id: 307ab1cb-f678-4a20-ab38-41f366687263
+name: Development
+type: 1
+canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+blocks:
+- auto_size: false
+  canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  compute_settings: null
+  description: Trains a logistic regression model to predict hypertension using family
+    history, stress, age, and BMI. Scales features, evaluates accuracy on held-out
+    test data, and ranks feature importance by coefficient magnitude.
+  height: 1000
+  id: 37c4ca16-e882-49f5-91e5-bfc747b126d5
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  name: Logistic Regression Model
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 2800
+- auto_size: false
+  canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  compute_settings: null
+  description: Fills missing medication values with "No Medication" and displays a
+    count of all medication categories to verify the cleaning is complete.
+  height: 1000
+  id: 4c65d938-63e3-4473-b9ed-e1f3e2de921b
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  name: Clean Medication Column
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 1400
+- auto_size: false
+  canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  compute_settings: null
+  description: Visualizes logistic regression feature importance for hypertension
+    prediction, displaying standardized coefficients for Family History, Age, Stress
+    Score, and BMI with test accuracy of 71.3%.
+  height: 1000
+  id: 667288bb-cac9-4303-90ee-9404ad13a7a0
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  name: Feature Importance Chart
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 6000
+  y: 2800
+- auto_size: false
+  canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  compute_settings: null
+  description: Loads hypertension dataset from CSV and displays first 5 rows plus
+    dataset dimensions (rows and columns count).
+  height: 1000
+  id: a1121a43-92e7-4edb-ab42-0a4ff3ddebef
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  name: Load Hypertension Dataset
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 0
+  y: 0
+- auto_size: false
+  canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  compute_settings: null
+  description: Visualizes hypertension prevalence across three stress levels (low,
+    medium, high) stratified by family history. Shows that high stress combined with
+    family history increases hypertension rates to 80%, versus 32% for low stress
+    without family history.
+  height: 1000
+  id: d5c95d8a-6701-4915-8298-64e7b918196e
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  name: Hypertension Rate by Family History & Stress
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 4000
+  y: 1400
+- auto_size: false
+  canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  compute_settings: null
+  description: Analyzes dataset structure and quality by displaying column data types,
+    missing value counts, numeric statistics, and categorical value distributions.
+    Provides a comprehensive overview for data exploration.
+  height: 1000
+  id: ec0ce5cf-f3b5-49f9-a798-07e0e2a9fca1
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  name: Dataset Summary & Missing Values
+  parent_id: null
+  properties: {}
+  status: 1
+  type: 1
+  variables: null
+  width: 1600
+  x: 2000
+  y: 0
+edges:
+- canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  id: 06f84945-10bf-40f0-8453-9ef49d416d8e
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  source: 4c65d938-63e3-4473-b9ed-e1f3e2de921b
+  target: 37c4ca16-e882-49f5-91e5-bfc747b126d5
+- canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  id: b69e54eb-805e-4295-9cca-c1f9f743b9ab
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  source: a1121a43-92e7-4edb-ab42-0a4ff3ddebef
+  target: ec0ce5cf-f3b5-49f9-a798-07e0e2a9fca1
+- canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  id: d2f8b35e-bc2f-479e-be10-b5adced5be5d
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  source: 37c4ca16-e882-49f5-91e5-bfc747b126d5
+  target: 667288bb-cac9-4303-90ee-9404ad13a7a0
+- canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  id: e817fef7-7643-4b98-9df4-98bfff012513
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  source: a1121a43-92e7-4edb-ab42-0a4ff3ddebef
+  target: 4c65d938-63e3-4473-b9ed-e1f3e2de921b
+- canvas_id: b4d46e47-bce1-4f08-a9df-fd0d0cc538be
+  id: ed89fabc-d1fd-434f-8be3-f0e1fb83f369
+  layer_id: 307ab1cb-f678-4a20-ab38-41f366687263
+  source: 4c65d938-63e3-4473-b9ed-e1f3e2de921b
+  target: d5c95d8a-6701-4915-8298-64e7b918196e
